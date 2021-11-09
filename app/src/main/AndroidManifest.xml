@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tutorials.eu.favdish">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE">
+
+    </uses-permission>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -9,9 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FavDish">
-
         <activity
-            android:name=".activites.SplashActivity"
+            android:name=".view.activities.AddUpdateDishActivity"
+            android:label="Add Dish"
+            android:theme="@style/Theme.FavDish.NoActionBar"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.SplashActivity"
             android:configChanges="orientation"
             android:label="@string/app_name"
             android:theme="@style/Theme.FavDish.NoActionBar">
@@ -22,9 +30,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".view.activities.MainActivity"
             android:label="@string/app_name" />
-
     </application>
 
 </manifest>
